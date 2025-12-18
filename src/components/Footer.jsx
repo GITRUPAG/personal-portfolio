@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Twitter, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import VisitorCounter from './VisitorCounter'; 
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -38,20 +39,25 @@ const Footer = () => {
           </div>
 
           {/* Social & Contact */}
-          <div>
-            <h4 className="font-bold text-gray-900 mb-6">Connect</h4>
-            <div className="flex gap-4 mb-6">
-              <a href="https://github.com/GITRUPAG" className="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all">
-                <Github size={20} />
-              </a>
-              <a href="https://www.linkedin.com/in/rupa-g-799a43240/" className="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all">
-                <Linkedin size={20} />
-              </a>
-              <a href="mailto:rupag12004@gmail.com" className="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all">
-                <Mail size={20} />
-              </a>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-bold text-gray-900 mb-6">Connect</h4>
+              <div className="flex gap-4 mb-4">
+                <a href="https://github.com/GITRUPAG" target="_blank" rel="noreferrer" className="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all">
+                  <Github size={20} />
+                </a>
+                <a href="https://www.linkedin.com/in/rupa-g-799a43240/" target="_blank" rel="noreferrer" className="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all">
+                  <Linkedin size={20} />
+                </a>
+                <a href="mailto:rupag12004@gmail.com" className="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all">
+                  <Mail size={20} />
+                </a>
+              </div>
+              <p className="text-sm text-gray-500 font-medium mb-6">Available for freelance & full-time.</p>
             </div>
-            <p className="text-sm text-gray-500 font-medium">Available for freelance & full-time.</p>
+
+            {/* VISITOR COUNTER SECTION */}
+            <VisitorCounter />
           </div>
         </div>
 
