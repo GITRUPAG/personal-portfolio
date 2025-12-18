@@ -10,7 +10,7 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Prepare data for Web3Forms
+    // Prepare data for Web3Forms add key
     const data = {
       ...formData,
       access_key: "74ac313c-b119-4eda-a7e8-6583c260fdda", 
