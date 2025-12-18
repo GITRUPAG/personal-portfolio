@@ -1,10 +1,18 @@
 import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Clock } from 'lucide-react';
 import { projects } from '../data/projects';
 
 const Projects = () => {
   return (
     <div className="py-12">
+      {/* "On the Way" Notification Banner */}
+      <div className="mb-8 flex items-center gap-3 bg-blue-50 border border-blue-100 p-4 rounded-2xl text-blue-700">
+        <Clock size={20} className="animate-pulse" />
+        <p className="font-medium text-sm md:text-base">
+          Live demos for these projects are currently on the way! Stay tuned.
+        </p>
+      </div>
+
       <div className="mb-16">
         <h1 className="text-4xl font-bold mb-4">Featured Projects</h1>
         <p className="text-gray-600 text-lg max-w-2xl">
@@ -46,16 +54,28 @@ const Projects = () => {
               <div className="flex gap-6">
                 <a 
                   href={project.link} 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm font-bold text-gray-900 hover:text-blue-600 transition-colors"
                 >
                   <Github size={18} /> Code
                 </a>
-                <a 
-                  href={project.demo} 
-                  className="flex items-center gap-2 text-sm font-bold text-gray-900 hover:text-blue-600 transition-colors"
-                >
-                  <ExternalLink size={18} /> Live Demo
-                </a>
+
+                {/* Conditional Demo Button */}
+                {project.demo ? (
+                  <a 
+                    href={project.demo} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm font-bold text-gray-900 hover:text-blue-600 transition-colors"
+                  >
+                    <ExternalLink size={18} /> Live Demo
+                  </a>
+                ) : (
+                  <span className="flex items-center gap-2 text-sm font-bold text-gray-400 cursor-not-allowed">
+                    <ExternalLink size={18} /> Demo Coming Soon
+                  </span>
+                )}
               </div>
             </div>
           </div>
