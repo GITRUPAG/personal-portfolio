@@ -73,7 +73,7 @@ const Contact = () => {
           <div>
             <h3 className="text-xl font-bold mb-6">Contact Information</h3>
             <div className="space-y-6">
-              <a href="mailto:rupag12004@gmail.com" className="flex items-center gap-4 group">
+              <a href="mailto:rupagcsc18@gmail.com" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
                   <Mail size={20} />
                 </div>
